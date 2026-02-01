@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>AETHER</title>
+
+<style>
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:Arial,sans-serif;}
+header{
+  height:100vh;
+  background:url("bg-brand.jpg") no-repeat center/cover;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.6);
+}
+header *{position:relative;z-index:1;}
+
+.logo{width:140px;margin-bottom:20px;}
+h1{font-size:60px;letter-spacing:6px;margin-bottom:30px;}
+
+.btn-view{
+  padding:15px 40px;
+  border:2px solid white;
+  color:white;
+  text-decoration:none;
+  letter-spacing:3px;
+  transition:.3s;
+}
+.btn-view:hover{background:white;color:black;}
+
+.social{margin-top:25px;display:flex;gap:15px;}
+.social a{
+  color:white;
+  text-decoration:none;
+  border:1px solid white;
+  padding:8px 14px;
+  letter-spacing:2px;
+  transition:.3s;
+}
+.social a:hover{background:white;color:black;}
+</style>
+</head>
+
+<body>
+<header>
+  <img src="logo.jpg" class="logo" alt="AETHER">
+  <h1>AETHER</h1>
+
+  <!-- LINK KE PRODUK -->
+  <a href="product.html#product" class="btn-view">VIEW PRODUCT</a>
+
+  <!-- IG & WA -->
+  <div class="social">
+    <a href="https://www.instagram.com/aethrrr_?igsh=MXQxajk2eHFodnUxMQ==" target="_blank">INSTAGRAM</a>
+    <a href="https://wa.me/6285722408795" target="_blank">WHATSAPP</a>
+  </div>
+</header>
+</body>
+</html>

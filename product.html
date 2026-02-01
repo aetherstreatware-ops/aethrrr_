@@ -5,6 +5,10 @@
 <title>AETHER – Product</title>
 
 <style>
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
   font-family:Arial, sans-serif;
@@ -19,14 +23,24 @@ body{
   color:white;
   text-decoration:none;
   font-size:14px;
+  opacity:.8;
+}
+.back-btn:hover{
+  opacity:1;
 }
 
-/* produk */
+/* section produk */
 #product{
-  padding:40px 20px;
+  padding:30px 20px 60px;
   text-align:center;
 }
 
+#product h2{
+  letter-spacing:3px;
+  margin-bottom:30px;
+}
+
+/* grid produk */
 .products{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -35,17 +49,26 @@ body{
   margin:auto;
 }
 
+/* link produk */
 .card-link{
   text-decoration:none;
   color:inherit;
 }
 
+/* card produk */
 .card{
   background:#1a1a1a;
-  border-radius:12px;
+  border-radius:14px;
   overflow:hidden;
   cursor:pointer;
-  transition:.3s;
+  transition:.4s ease;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 .card img{
@@ -54,7 +77,7 @@ body{
 }
 
 .card h3{
-  margin:10px 0 5px;
+  margin:12px 0 6px;
 }
 
 .card p{
@@ -63,8 +86,8 @@ body{
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 12px 30px rgba(0,0,0,.5);
 }
 </style>
 </head>
@@ -112,6 +135,15 @@ body{
 
   </div>
 </section>
+
+<script>
+const cards = document.querySelectorAll('.card');
+cards.forEach((card, i) => {
+  setTimeout(() => {
+    card.classList.add('show');
+  }, i * 150);
+});
+</script>
 
 </body>
 </html>
